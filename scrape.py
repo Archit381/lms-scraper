@@ -55,19 +55,12 @@ for j in progress:
 
 # print(details)
 for i in timeline:
-     due_date=i.find_element(By.CSS_SELECTOR, 'h5.h6.d-inline.font-weight-bold.px-2').text
-     c=0
-     for j in timeline3:
-        assign_name=i.find_element(By.CSS_SELECTOR, "small.text-muted.text-truncate").text
-        details["Assignment Due"].append(assign_name)
-        c=c+1
-     
-     for k in c:
-        details["Due Date"].append(due_date)
+    due_date=i.find_element(By.CSS_SELECTOR, 'h5.h6.d-inline.font-weight-bold.px-2').text
+    details["Due Date"].append(due_date)
 
-# for i in timeline2:
-#     assign_name=i.find_element(By.CSS_SELECTOR, "small.text-muted.text-truncate").text
-#     details["Assignment Due"].append(assign_name)
+for i in timeline2:
+    assign_name=i.find_element(By.CSS_SELECTOR, "small.text-muted.text-truncate").text
+    details["Assignment Due"].append(assign_name)
 
 
 print(details)
